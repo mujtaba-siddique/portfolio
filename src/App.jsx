@@ -6,9 +6,6 @@ return (
   <>
     <Navbar/>
     <Home></Home>
-  
-   
-   
   </>
       )
     }
