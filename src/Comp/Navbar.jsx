@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom";
 import "@fontsource/bebas-neue";
 import NavbarList from "./NavbarList";
 
 function Navbar({ darkModeComp }) {
   return (
-    <div className={`navbar shadow-lg h-16 ${darkModeComp ? 'bg-gray-900 text-white' : 'bg-Gainsboro text-black'}`}>
+    <div className={`navbar shadow-md h-16 ${darkModeComp ? 'bg-gray-900 text-white' : 'bg-gray-200 text-black'}`}>
       <div className="navbar-start">
-        <div className="dropdown bg-gray-200">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            role="button"
+            className={`btn btn-ghost lg:hidden ${darkModeComp ? 'bg-gray-900 text-white' : 'bg-gray-200 text-black'}`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -17,24 +22,27 @@ function Navbar({ darkModeComp }) {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-8 w-52 p-2 shadow-xl font-BebasNeue text-2xl"
+            className={`menu menu-sa dropdown-content mt-2 w-52 p-2 shadow-xl text-xl font-bebas ${
+              darkModeComp ? 'bg-gray-800 text-white rounded-lg border border-gray-600' : 'bg-white text-black rounded-lg border border-gray-300'
+            }text-center`}
           >
-            <NavbarList />
+           
+            <NavbarList/>
           </ul>
         </div>
-        <a className="btn btn-ghost text-4xl font-BebasNeue text-purple-700 px-20">
-          WELCOME!
-        </a>
+        <Link to="/Home" className=" btn btn-ghost text-4xl font-bebas text-purple-700 px-4"> WELCOME!</Link>
+       
       </div>
-      <div className="navbar-end hidden lg:flex font-bold font-BebasNeue">
-        <ul className="menu menu-horizontal px-1 text-l pr-10 text-black-300">
+
+      <div className="navbar-end hidden lg:flex font-bold">
+        <ul className={`menu menu-horizontal px-1 text-lg ${darkModeComp ? 'text-white' : 'text-black'}`}>
           <NavbarList />
         </ul>
       </div>
