@@ -19,7 +19,7 @@ const About = ({ darkModeComp }) => {
           consideration the user experience while writing reusable and efficient
           code. I passionately combine good design, technology, and innovation
           in all my projects, which I like to accompany from the first idea to
-          release. Currently, I'm focused on backend development.
+          release. Currently, I'm focused on backend development.</p>
           <div className="grid grid-cols-3 gap-4 mt-[40px] mx-10">
             <label className="form-control w-full">
               <span className="mr-auto font-bold text-xl">06.69</span>
@@ -57,7 +57,7 @@ const About = ({ darkModeComp }) => {
               <FaTwitter />
             </a>
           </div>
-        </p>
+        
       </div>
     </>
   );
